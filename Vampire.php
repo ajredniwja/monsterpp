@@ -6,17 +6,16 @@ class Vampire extends Monster
     protected $victims;
 
 
-    function __construct($name = "new monster")
+    function __construct($name = "Vampire")
     {
-        parent::__construct($name);
-        self::$_counter++;
-        $this->victims = self::$_counter;
-
+        parent::setName($name);
     }
 
     function attack()
     {
-        echo "The new monster is atacking";
+        $this->victims = self::$_counter;
+        self::$_counter++;
+        echo "Attack No. ".$this->victims." ".$this->name." the new monster is atacking<br>";
     }
 
     function getVictims()

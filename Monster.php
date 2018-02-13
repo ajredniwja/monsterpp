@@ -6,7 +6,7 @@ class Monster
 
     function __construct($name = "drakula")
     {
-        $this->$name = $name;
+        $this->name = $name;
     }
 
     function getName()
@@ -21,6 +21,6 @@ class Monster
 
     function attack()
     {
-       echo $this->name."is attacking";
+       echo "<h1>".$this->name. " is attacking! >.<</h1>";
     }
 }
